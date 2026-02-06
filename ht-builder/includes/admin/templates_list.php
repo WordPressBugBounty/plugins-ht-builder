@@ -27,13 +27,13 @@
             <div class="htbanner-content">
                 <div class="htbanner-desc">
                     <h3><?php esc_html_e( 'HT Builder Templates Library', 'ht-builder' ); ?></h3>
-                <?php if( is_plugin_active('ht-builder-pro/ht-builder.php') ): ?>
+                <?php if( is_plugin_active('htbuilder-pro/ht-builder.php') ): ?>
                     <p><?php esc_html_e( '10 Headers and 10 footers & 3 blog layout', 'ht-builder' ); ?></p>
                 <?php else:?>
                     <p><?php esc_html_e( '2 Templates are Free and 18 Templates are Premium.', 'ht-builder' ); ?></p>
                 <?php endif; ?>
                 </div>
-                <?php if( !is_plugin_active('ht-builder-pro/ht-builder.php') ){ ?>
+                <?php if( !is_plugin_active('htbuilder-pro/ht-builder.php') ){ ?>
                     <a href="https://hasthemes.com/plugins/ht-builder-wordpress-theme-builder-for-elementor/" target="_blank"><?php esc_html_e( 'Buy HT Builder Pro Version', 'ht-builder' );?></a>
                 <?php } ?>
             </div>
@@ -68,7 +68,7 @@
                             <div class="httemplate-thumbnails">
                                 <img src="<?php echo esc_url( $httemplate['thumbnail'] ); ?>" alt="<?php echo esc_attr( $httemplate['title'] ); ?>">
                                 <div class="httemplate-action">
-                                    <?php if( $httemplate['is_pro'] == 1 ):?>
+                                    <?php if( $httemplate['is_pro'] == 1 && !is_plugin_active('htbuilder-pro/ht-builder.php') ):?>
                                         <a href="https://hasthemes.com/plugins/ht-builder-wordpress-theme-builder-for-elementor/" target="_blank">
                                             <?php esc_html_e( 'Buy Now', 'ht-builder' ); ?>
                                         </a>
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="httemplate-content">
-                                <h3><?php echo esc_html__( $httemplate['title'], 'ht-builder' ); if( $httemplate['is_pro'] == 1 ){ echo ' <span>( '.esc_html__('Pro','ht-builder').' )</span>'; } ?></h3>
+                                <h3><?php echo esc_html__( $httemplate['title'], 'ht-builder' ); if( $httemplate['is_pro'] == 1 && !is_plugin_active('htbuilder-pro/ht-builder.php') ){ echo ' <span>( '.esc_html__('Pro','ht-builder').' )</span>'; } ?></h3>
                                 <div class="httemplate-tags">
                                     <?php echo implode( ' / ', explode( ',', $httemplate['tags'] ) ); ?>
                                 </div>

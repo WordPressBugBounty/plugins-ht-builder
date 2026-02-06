@@ -7,7 +7,7 @@ class HTBuilder_Template_Library{
     const TRANSIENT_KEY = 'htbuilder_template_info';
 
     public static $endpoint = HTBUILDER_PL_URL.'includes/admin/json/layoutinfofree.json';
-    public static $templateapi = 'https://api.hasthemes.com/api/htbuilder/layouts-free/%s.json';
+    public static $templateapi = HTBUILDER_PL_URL.'includes/admin/json/layouts/%s.json';
 
     public static $api_args = [];
 
@@ -100,7 +100,21 @@ class HTBuilder_Template_Library{
         if ( ! get_transient( self::TRANSIENT_KEY ) || $force_update ) {
             self::set_templates_info( true );
         }
-        return get_transient( self::TRANSIENT_KEY );
+        $templates_info = get_transient( self::TRANSIENT_KEY );
+
+        // Replace remote thumbnail URLs with local paths
+        if ( ! empty( $templates_info['templates'] ) && is_array( $templates_info['templates'] ) ) {
+            $local_image_url = HTBUILDER_PL_URL . 'includes/admin/assets/images/layout/';
+            foreach ( $templates_info['templates'] as $key => $template ) {
+                if ( ! empty( $template['thumbnail'] ) ) {
+                    // Extract filename from URL (e.g., header-1.png)
+                    $filename = basename( $template['thumbnail'] );
+                    $templates_info['templates'][ $key ]['thumbnail'] = $local_image_url . $filename;
+                }
+            }
+        }
+
+        return $templates_info;
     }
 
     /**

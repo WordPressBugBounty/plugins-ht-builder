@@ -73,7 +73,7 @@ class Base {
     */
     public function require_include_files(){
         if ( ! function_exists('is_plugin_active') ){ include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); }
-        if( is_plugin_active('ht-builder-pro/ht-builder.php') ){
+        if( is_plugin_active('htbuilder-pro/ht-builder.php') ){
             require ( HTBUILDER_PL_PATH_PRO.'includes/admin/admin-setting.php' );
         }else{
             require( __DIR__ . '/admin/admin-setting.php');
@@ -188,7 +188,7 @@ class Base {
         $htbuilder_settings_link = '<a href="'.admin_url('admin.php?page=htbuilder').'">'.__( 'Settings', 'ht-builder' ).'</a>';
         array_unshift( $links, $htbuilder_settings_link );
 
-        if( !is_plugin_active('ht-builder-pro/ht-builder.php') ){
+        if( !is_plugin_active('htbuilder-pro/ht-builder.php') ){
             $links['htbgo_pro'] = sprintf('<a href="http://hasthemes.com/" target="_blank" style="color: #39b54a; font-weight: bold;">' . __('Go Pro','ht-builder') . '</a>');
         }
         return $links; 
