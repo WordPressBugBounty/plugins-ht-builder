@@ -121,14 +121,14 @@
   position: relative;
 }
 .features-list-area li::before {
-  content: "";
+  content: "\f147";
   font-family: dashicons;
   left: -5px;
   position: relative;
   top: 2px;
 }
 .features-list-area li.htdel::before {
-  content: "";
+  content: "\f335";
 }
 .htbuilder-admin-row .features-list-area .button {
   margin-bottom: 20px;
