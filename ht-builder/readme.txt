@@ -2,8 +2,8 @@
 Contributors: hasthemes, htplugins, devitemsllc, zenaulislam, aslamhasib
 Tags: Builder, Elementor, Blog Builder, Widget, Page Builder
 Requires at least: 5.0
-Tested up to: 7.0
-Stable tag: 1.3.4
+Tested up to: 7.1
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,13 @@ HT Slider For Elementor is a powerful and user-friendly slider addon for Element
 HT Contact Form 7 Widget is an Elementor addon that allows you to easily drag and drop Contact Form 7 forms into your web pages. With the help of this plugin, you can choose your form from the drop-down list, Custom Styling Options, and add it to any page or place on your website. The HT Contact Form 7 Widget is an essential tool for anyone using Contact Form 7 on their website.
 
 == Changelog ==
+
+= Version: 1.3.5 - Date: 25-Aug-2026 =
+
+* Fixed: Recommended Plugins page showing a single stacked column instead of a grid on WordPress 7.1+.
+* Fixed: A few minor issues.
+* Tested: Compatibility with the latest version of WordPress.
+* Tested: Compatibility with the latest version of Elementor.
 
 = Version: 1.3.4 - Date: 13-Aug-2026 =
 * Fixed: Elementor Atomic Elements not styled when used in header, footer, single/archive templates.

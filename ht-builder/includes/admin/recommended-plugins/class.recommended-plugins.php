@@ -166,8 +166,13 @@ class HTRP_Recommended_Plugins {
                     .htrp-admin-tab-pane{
                       display: none;
                     }
+                    /* Grid layout is normally provided by core's .plugin-install-php #the-list rule,
+                       which is scoped to WP's own Add Plugins screen and never matches this page -
+                       define it ourselves so the cards don't just stack in a single column. */
                     .htrp-admin-tab-pane.htrp-active{
-                      display: block;
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 16px;
                     }
                     .htrp-extension-admin-tab-area .filter-links li>a:focus, .htrp-extension-admin-tab-area .filter-links li>a:hover {
                         color: inherit;
@@ -181,6 +186,14 @@ class HTRP_Recommended_Plugins {
                     .downloaded-count{
                         display: block;
                         margin-top:5px;
+                    }
+                    .plugin-card h3 a{
+                        text-decoration: none;
+                    }
+                    .plugin-card{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
                     }
                 </style>
 

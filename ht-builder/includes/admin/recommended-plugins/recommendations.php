@@ -91,12 +91,17 @@ if( class_exists('Hasthemes\HTBuilder\HTRP_Recommended_Plugins') ){
                 array(
                     'slug'      => 'woolentor-addons',
                     'location'  => 'woolentor_addons_elementor.php',
-                    'name'      => __( 'WooLentor – WooCommerce Elementor Addons + Builder', 'ht-builder' )
+                    'name'      => __( 'ShopLentor – All-in-One WooCommerce Growth & Store Enhancement Plugin', 'ht-builder' )
                 ),
                 array(
                     'slug'      => 'whols',
                     'location'  => 'whols.php',
-                    'name'      => __( 'Whols', 'ht-builder' )
+                    'name'      => __( 'Whols – Wholesale Prices and B2B Store Solution for WooCommerce', 'ht-builder' )
+                ),
+                array(
+                    'slug'      => 'recurio',
+                    'location'  => 'recurio.php',
+                    'name'      => __( 'Recurio – Ultimate Subscription for WooCommerce', 'ht-builder' )
                 ),
 
             )
@@ -129,12 +134,7 @@ if( class_exists('Hasthemes\HTBuilder\HTRP_Recommended_Plugins') ){
                 array(
                     'slug'      => 'ht-contactform',
                     'location'  => 'contact-form-widget-elementor.php',
-                    'name'      => __( 'HT Contact Form 7', 'ht-builder' )
-                ),
-                array(
-                    'slug'      => 'ht-wpform',
-                    'location'  => 'wpform-widget-elementor.php',
-                    'name'      => __( 'HT WPForms', 'ht-builder' )
+                    'name'      => __( 'HT Contact Form – Drag & Drop Form Builder for WordPress', 'ht-builder' )
                 ),
                 array(
                     'slug'      => 'cookieray',
@@ -142,24 +142,14 @@ if( class_exists('Hasthemes\HTBuilder\HTRP_Recommended_Plugins') ){
                     'name'      => __( 'CookieRay – Cookie Banner for Cookie Consent (GDPR/CCPA Compliant)', 'ht-builder' )
                 ),
                 array(
-                    'slug'      => 'recurio',
-                    'location'  => 'recurio.php',
-                    'name'      => __( 'Recurio – Ultimate Subscription for WooCommerce', 'ht-builder' )
-                ),
-                array(
                     'slug'      => 'insert-headers-and-footers-script',
                     'location'  => 'init.php',
                     'name'      => __( 'Insert Headers and Footers Code', 'ht-builder' )
                 ),
                 array(
-                    'slug'      => 'extensions-for-cf7',
-                    'location'  => 'extensions-for-cf7.php',
-                    'name'      => __( 'Extensions For CF7 (Contact form 7 Database, Conditional Fields and Redirection)', 'ht-builder' )
-                ),
-                array(
                     'slug'      => 'courseglade-lms',
                     'location'  => 'courseglade-lms.php',
-                    'name'      => __( 'ECourseGlade LMS – Online Course & eLearning Platform', 'ht-builder' )
+                    'name'      => __( 'CourseGlade LMS – Online Course & eLearning Platform', 'ht-builder' )
                 )
 
             )

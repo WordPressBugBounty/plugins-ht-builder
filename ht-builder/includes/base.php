@@ -73,6 +73,10 @@ class Base {
     */
     public function require_include_files(){
         if ( ! function_exists('is_plugin_active') ){ include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); }
+        if ( is_admin() ) {
+            require( __DIR__ . '/admin/class-api.php');
+            require( __DIR__ . '/admin/class-dashboard-widget.php');
+        }
         if( is_plugin_active('htbuilder-pro/ht-builder.php') ){
             require ( HTBUILDER_PL_PATH_PRO.'includes/admin/admin-setting.php' );
         }else{
